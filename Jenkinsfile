@@ -5,7 +5,7 @@ stage('branchparameter'){
 steps{
   script{
     def value = "vamshi/value"
-    def newvalue = "${value}.replace("vamshi/","")"
+    def newvalue = "${value}.replaceAll("vamshi/","")"
     echo "${newvalue}"  
   }
 }

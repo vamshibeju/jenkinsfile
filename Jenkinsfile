@@ -3,8 +3,10 @@ agent any
 stages{
 stage('branchparameter'){
 steps{
-echo "${GIT_BRANCH}"
-
+  script{
+    def branch= "${GIT_BRANCH}.replace("origin/","")
+    echo "${branch}"
+  }
 }
 }
 }

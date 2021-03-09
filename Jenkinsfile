@@ -3,7 +3,7 @@ agent any
 stages{
 stage('branchparameter'){
 steps{
-echo "${BRANCH_NAME}"
+echo "${GIT_BRANCH}"
 
 }
 }

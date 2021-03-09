@@ -5,8 +5,7 @@ stage('branchparameter'){
 steps{
   script{
     //def branch= "{GIT_BRANCH.replace("origin/","")}"
-    echo "${BRANCH}"
-    
+    echo "${GIT_BRANCH,fullName=false}"
     echo "${BUILD_TAG}"
   }
 }
